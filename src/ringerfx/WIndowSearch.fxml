@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="606.0" prefWidth="930.0" style="-fx-background-color: #e3dfdc;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ringerfx.WIndowSearchController">
+   <children>
+      <TextField fx:id="textFieldSearch" layoutX="29.0" layoutY="149.0" onKeyPressed="#handleEnter" prefHeight="25.0" prefWidth="243.0" promptText="Введите табельный номер" style="-fx-background-color: #FDFFFF;">
+         <font>
+            <Font size="14.0" />
+         </font></TextField>
+      <Button fx:id="buttonSearch" layoutX="353.0" layoutY="149.0" mnemonicParsing="false" onAction="#buttonSearchDriver" onKeyPressed="#handleEnter" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: #678a99;" text="Поиск" textFill="#f9f8ff">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label fx:id="nkLabel" layoutX="39.0" layoutY="41.0" prefHeight="20.0" prefWidth="223.0" textFill="#4a6875">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Separator layoutX="467.0" layoutY="41.0" orientation="VERTICAL" prefHeight="401.0" prefWidth="5.0" style="-fx-background-color: #4A6875;" />
+      <Label fx:id="favoriteNumbLabel" layoutX="600.0" layoutY="159.0" text="Избранные номера водителей" textFill="#4a6875">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <ListView fx:id="listViewSrc" layoutX="30.0" layoutY="191.0" prefHeight="253.0" prefWidth="420.0" style="-fx-background-color: #FDFFFF;" />
+      <ListView fx:id="listViewFavorite" layoutX="492.0" layoutY="191.0" onKeyPressed="#handle" prefHeight="253.0" prefWidth="414.0" />
+      <Button fx:id="buttonRing" layoutX="338.0" layoutY="488.0" mnemonicParsing="false" onAction="#buttonRing" prefHeight="25.0" prefWidth="265.0" style="-fx-background-color: #678a99;" text="Позвонить" textFill="#f9f8ff">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Button fx:id="buttonAddFavorite" layoutX="338.0" layoutY="538.0" mnemonicParsing="false" onAction="#buttonAddFavorite" prefHeight="25.0" prefWidth="265.0" style="-fx-background-color: #678a99;" text="Добавить в избранное" textFill="#f9f8ff">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <Label layoutX="39.0" layoutY="80.0" text="Внут. номер." textFill="#4a6875">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label fx:id="labelInNumber" layoutX="171.0" layoutY="80.0" prefHeight="17.0" prefWidth="35.0" text="4123" textFill="#4a6875">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Label layoutX="518.0" layoutY="41.0" prefHeight="20.0" prefWidth="362.0" text="Для удаления номера из избранного, нажмите Delete." textFill="#4a6875">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
+      <Button fx:id="changeChanel" layoutX="224.0" layoutY="75.0" mnemonicParsing="false" onAction="#setChangeChanel" prefHeight="30.0" prefWidth="97.0" style="-fx-background-color: #678a99;" text="Изменить" textFill="#f9f8ff">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Label layoutX="685.0" layoutY="72.0" />
+      <Label layoutX="528.0" layoutY="79.0" text="После нажатия, элемент из спика удаляется из базы. " textFill="#4a6875">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
